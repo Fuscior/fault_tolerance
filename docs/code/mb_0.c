@@ -15,10 +15,8 @@ void debug_print(void);
 void myIsr(void *CallbackRef);
 void enable_ISR(void);
 
-//u32 arraya[11]={4096,2048,0,1024,4096,2048,4096,1024};
 u32 mathched_array[11];
 
-//u32 arraya[5]={0,1,2,4,8,15};	//red
 u32 arraya[8]={8,8,8,64,64,64,2048,2048,2048};	//blue
 
 u32 counter=0;
@@ -36,11 +34,9 @@ int main()
     while(1){
 			hold_flag=1;
 
-			//write_data_a(arraya[flip]);
 			write_data_a(arraya[counter]);
 
 			for(int x=0; x<9999999; x++){}
-
 
 			while(hold_flag){
 			} //hold for ip block

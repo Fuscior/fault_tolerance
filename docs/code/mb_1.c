@@ -30,7 +30,6 @@ int main()
     while(1){
 			hold_flag=1;
 
-			//write_data_a(arrayb[flip]);
 			write_data_a(arrayb[counter]);
 			flip= !flip;
 
@@ -40,7 +39,6 @@ int main()
 			if(counter==8){
 				counter=0;
 			}
-
     }
     cleanup_platform();
     return 0;

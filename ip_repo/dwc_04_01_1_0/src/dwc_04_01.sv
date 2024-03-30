@@ -1,3 +1,5 @@
+//backup verilog
+
 `timescale 1ns / 1ps
  
 //todo 
@@ -131,7 +133,7 @@ begin
     if(dwc_bypass)
         vga_output <= '1;
     else
-        vga_output  <= reg_vga_output;  
+        vga_output <= reg_vga_output;  
 end
 
 always_ff@(posedge clk) //next state on pos edge clk

@@ -15,9 +15,6 @@ void debug_print(void);
 void myIsr(void *CallbackRef);
 void enable_ISR(void);
 
-
-//u32 arrayb[11]={4096,2048,0,1024,4096,2048,4096,1024};
-//u32 arrayb[5]={0,1,2,4,8,15};	//red
 u32 arrayb[8]={8,8,8,64,64,64,2048,2048,2048};
 
 u32 counter=0;

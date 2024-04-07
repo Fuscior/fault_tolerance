@@ -1,4 +1,4 @@
-
+//working 07/04
 #include <stdio.h>
 #include <stdbool.h>
 #include "platform.h"
@@ -8,8 +8,10 @@
 #include "xil_exception.h"	//isr
 
 
-u32 *baseaddr_p = (u32 *) XPAR_DWC_04_01_0_S00_AXI_BASEADDR;					//Base Address of the dwc_
-volatile unsigned int *setReg = (unsigned int *)XPAR_DWC_04_01_0_S00_AXI_BASEADDR;	//set register
+u32 *baseaddr_p = (u32 *) XPAR_DWC_04_02_0_S00_AXI_BASEADDR;					//Base Address of the dwc_
+volatile unsigned int *setReg = (unsigned int *)XPAR_DWC_04_02_0_S00_AXI_BASEADDR;	//set register
+
+u32 *baseaddr_bram = (u32 *)XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR;
 
 void debug_print(void);
 void myIsr(void *CallbackRef);
@@ -17,7 +19,7 @@ void enable_ISR(void);
 
 u32 mathched_array[11];
 
-u32 arraya[8]={8,8,8,64,64,64,2048,2048,2048};	//blue
+//u32 arraya[8]={8,8,8,64,64,64,2048,2048,2048};	//blue
 
 u32 counter=0;
 u32 hold_flag=1;
@@ -30,19 +32,29 @@ int main()
     enable_ISR();
 
     print("mb_0");
+    *(baseaddr_bram + 0)= 0;
+
+    for(int i=0; i<99999;i++){}
+
+    while(*(baseaddr_bram + 0) == 0){
+    	xil_printf("waiting for data\n\n\r");
+    }
+
+    xil_printf("i shoudlnt be here\n\n\r");
 
     while(1){
 			hold_flag=1;
 
-			write_data_a(arraya[counter]);
+			write_data_a(*(baseaddr_bram + counter));
 
+			//debug_print();
 			for(int x=0; x<9999999; x++){}
 
 			while(hold_flag){
 			} //hold for ip block
 
 			counter++;
-			if(counter==8){
+			if(counter==1000){
 				counter=0;
 			}
     }

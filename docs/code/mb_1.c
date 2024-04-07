@@ -8,8 +8,10 @@
 #include "xil_exception.h"	//isr
 
 
-u32 *baseaddr_p = (u32 *) XPAR_DWC_04_01_0_S00_AXI_BASEADDR;					//Base Address of the dwc_
-volatile unsigned int *setReg = (unsigned int *)XPAR_DWC_04_01_0_S00_AXI_BASEADDR;	//set register
+u32 *baseaddr_p = (u32 *) XPAR_DWC_04_02_0_S00_AXI_BASEADDR;					//Base Address of the dwc_
+volatile unsigned int *setReg = (unsigned int *)XPAR_DWC_04_02_0_S00_AXI_BASEADDR;	//set register
+
+u32 *baseaddr_bram = (u32 *)XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR;
 
 void debug_print(void);
 void myIsr(void *CallbackRef);
@@ -27,16 +29,33 @@ int main()
     init_platform();
     enable_ISR();
 
+    *(baseaddr_bram + 0)= 0;
+    *(baseaddr_bram + 1)= 1;
+    *(baseaddr_bram + 2)= 15;
+    *(baseaddr_bram + 3)= 15;
+    *(baseaddr_bram + 4)= 240;
+    *(baseaddr_bram + 5)= 240;
+	*(baseaddr_bram + 6)= 240;
+	*(baseaddr_bram + 7)= 3840;
+	*(baseaddr_bram + 8)= 3840;
+	*(baseaddr_bram + 9)= 865;
+
+
+	for(int i=0; i<99999;i++){}
+
+    while(*(baseaddr_bram + 0) == 0){
+
+    }
+
     while(1){
 			hold_flag=1;
 
-			write_data_a(arrayb[counter]);
-			flip= !flip;
+			write_data_a(*(baseaddr_bram + counter));
 
 			while(hold_flag){
 			}
 			counter++;
-			if(counter==8){
+			if(counter==1000){
 				counter=0;
 			}
     }

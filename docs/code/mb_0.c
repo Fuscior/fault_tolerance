@@ -19,8 +19,6 @@ void enable_ISR(void);
 
 u32 mathched_array[11];
 
-//u32 arraya[8]={8,8,8,64,64,64,2048,2048,2048};	//blue
-
 u32 counter=0;
 u32 hold_flag=1;
 
@@ -37,10 +35,8 @@ int main()
     for(int i=0; i<99999;i++){}
 
     while(*(baseaddr_bram + 0) == 0){
-    	xil_printf("waiting for data\n\n\r");
+    	xil_printf("waiting for data to be writen\n\n\r");
     }
-
-    xil_printf("i shoudlnt be here\n\n\r");
 
     while(1){
 			hold_flag=1;
@@ -51,7 +47,7 @@ int main()
 			for(int x=0; x<9999999; x++){}
 
 			while(hold_flag){
-			} //hold for ip block
+			} //hold for ip block completion
 
 			counter++;
 			if(counter==1000){

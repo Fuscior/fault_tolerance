@@ -1,12 +1,7 @@
 `timescale 1ns / 1ps
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Reference Book: 
-// Chu, Pong P.
-// Wiley, 2008
-// VGA Mode
-// 640x480 pixels VGA screen with 25MHz pixel rate based on 60 Hz refresh rate
-// 800 pixels/line * 525 lines/screen * 60 screens/second = ~25.2M pixels/second
+// Reference Book: Chu, Pong P.Wiley, 2008
 //////////////////////////////////////////////////////////////////////////////////
 
 module vga_controller(

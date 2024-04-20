@@ -33,9 +33,10 @@ The usage of terrestrial processors in harsh environments, such as space is not 
 | `LUTRAM`  |                 3%  |          4%  |          ~%  |        TBD%  |         3%  |        TBD%  |
 | `LUT`  |                    8%  |         11%  |         ~1%  |        TBD%  |         9%  |        TBD%  |
 
+![image](https://github.com/Fuscior/fault_tolerance/blob/main/docs/code/images/demo_image_2.jpg)  
+
 # System flowchart
 ![image](https://github.com/Fuscior/fault_tolerance/blob/main/docs/code/images/High_level_system_diagram.png)
-
 
 # DWC flowchart  
 ![image](https://github.com/Fuscior/fault_tolerance/blob/main/docs/code/images/DWC_control_path.png)

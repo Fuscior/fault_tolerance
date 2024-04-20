@@ -27,13 +27,13 @@ The usage of terrestrial processors in harsh environments, such as space is not 
 
 |       device  |         2Core % |      3Core % |     DWC IP % |     TMR IP % | `DWC system %` | `TMR system %` |
 | ------------- | :-------------: |------------- |------------- |------------- |------------- |------------- |
-| `MMCM`  |                  20%  |         20%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |
-| `BUFG`  |                  13%  |         13%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |
-| `I/O`  |                    2%  |          2%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |
-| `BRAM`  |                  43%  |         64%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |
-| `FF`  |                     3%  |          5%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |
-| `LUTRAM`  |                 3%  |          4%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |
-| `LUT`  |                    8%  |         11%  |        TBD%  |        TBD%  |        TBD%  |        TBD%  |
+| `MMCM`  |                  20%  |         20%  |        TBD%  |        TBD%  |        20%  |        TBD%  |
+| `BUFG`  |                  13%  |         13%  |        TBD%  |        TBD%  |        16%  |        TBD%  |
+| `I/O`  |                    2%  |          2%  |        TBD%  |        TBD%  |        15%  |        TBD%  |
+| `BRAM`  |                  43%  |         64%  |        TBD%  |        TBD%  |        24%  |        TBD%  |
+| `FF`  |                     3%  |          5%  |        TBD%  |        TBD%  |         5%  |        TBD%  |
+| `LUTRAM`  |                 3%  |          4%  |        TBD%  |        TBD%  |         3%  |        TBD%  |
+| `LUT`  |                    8%  |         11%  |        TBD%  |        TBD%  |         9%  |        TBD%  |
 
 # System flowchart
 ![image](https://github.com/Fuscior/fault_tolerance/blob/main/docs/code/images/High_level_system_diagram.png)

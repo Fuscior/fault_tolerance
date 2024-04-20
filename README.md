@@ -40,4 +40,4 @@ The usage of terrestrial processors in harsh environments, such as space is not 
 # DWC flowchart  
 ![image](https://github.com/Fuscior/fault_tolerance/blob/main/docs/code/images/DWC_control_path.png)
 
-[![Watch the video](https://i.stack.imgur.com/Vp2cE.png)]([https://youtu.be/vt5fpE0bzSY](https://www.youtube.com/watch?v=sJcxpZKU-E0&list=PLK33Tw0bX_mtqs9ez823_F9wybei9IPkA&index=3&t=2s))
+[![Watch the video]([https://youtu.be/vt5fpE0bzSY](https://www.youtube.com/watch?v=sJcxpZKU-E0&list=PLK33Tw0bX_mtqs9ez823_F9wybei9IPkA&index=3&t=2s))

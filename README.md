@@ -1,7 +1,7 @@
 # fault_tolerance
 # [Multi_Core_Fault_Tolerant_FPGA](https://www.brennan.gg/)
 
- **System_V5**  
+# **System_V5**  
 
 Build instructions    
 tbd  

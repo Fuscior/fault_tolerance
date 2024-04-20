@@ -4,7 +4,9 @@
 # **System_V5**  
 
 Build instructions    
-point to ip_repo  
+1) point to ip_repo
+2) cd /path..../fault_tolerance-main/vivado
+3) source design_1.tcl
 
 **Soft_core CPU**: [MicroBlaze](https://www.xilinx.com/products/design-tools/microblaze.html)  
 **FPGA Board**: [Nexys-A7-50T](https://www.xilinx.com/support/university/xup-boards/DigilentNexysA7.html)  

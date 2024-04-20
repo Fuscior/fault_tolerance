@@ -1,5 +1,5 @@
 # fault_tolerance
-# [Multi_Core_Fault_Tolerant_FPGA](https://www.brennan.gg/)
+# [$ whois](https://www.brennan.gg/)
 
 # **[System_V5 demo](https://youtu.be/sJcxpZKU-E0)**  
 
